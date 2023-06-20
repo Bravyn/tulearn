@@ -11,25 +11,28 @@ def  check_hostname():
 
 check_hostname()
 
+#st.warning(f"Connected: {client_address}")
+
 def handle_client(client_socket, client_address):
-    st.warning(f"Connected: {client_address}")
     
     while True:
         data = client_socket.recv(1024).decode()
         if not  data:
             break
-        st.caption(f"Received from {client_address}: {data}")
+        #st.info(f"Received from {client_address}: {data}")
     client_socket.close()
-    st.warning(f"Disconnected: {client_address}")
+    #st.warning(f"Disconnected: {client_address}")
+
+host = '127.0.0.1'
+port = 8004
+
+st.info(f'Server listening on {host} : {port}')
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind((host, port))
+server_socket.listen(5)
+st.info(f'Server listening on {host} : {port}')
 
 def start_server():
-    host = '127.0.0.1'
-    port = 8080
-
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((host, port))
-    server_socket.listen(5)
-    st.info(f'Server listening on {host} : {port}')
 
     while True:
         client_socket,  client_address = server_socket.accept()
