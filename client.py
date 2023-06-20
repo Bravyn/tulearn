@@ -5,7 +5,7 @@ st.title("Client X")
 def send_message():
 
     host = '127.0.0.1'
-    port = 8070
+    port = 8005
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
