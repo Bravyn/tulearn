@@ -12,7 +12,6 @@ def  check_hostname():
 check_hostname()
 
 def handle_client(client_socket, client_address):
-    st.title("Client X")
     st.warning(f"Connected: {client_address}")
     
     while True:
@@ -33,7 +32,7 @@ def start_server():
     st.info(f'Server listening on {host} : {port}')
 
     while True:
-        client_socket = client_address = server_socket.accept()
+        client_socket,  client_address = server_socket.accept()
         client_thread = threading.Thread(target=handle_client, args = (client_socket, client_address))
         client_thread.start()
 
