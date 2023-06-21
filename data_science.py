@@ -52,11 +52,15 @@ def start_engine():
         #time.sleep(.0318)
     #start_engine()  
 
+global exp
 exp = 10
 col1, col2 = st.columns([3, 1])
 #name = st.text_input("What is your name, detective?")
 with col1:
-    genesis()
+    exp = genesis(exp)
+    
 with col2:
-    st.success(f"Experience Points: {exp}pts.")
+    bar = st.progress(0, "Detective Zainab's Experience")
+    bar.progress(exp,"Detective Zainab's Experience" )
+    #st.success(f"Experience Points: {exp}pts.")
 
