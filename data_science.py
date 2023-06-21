@@ -1,12 +1,15 @@
 import streamlit as st
 import hashlib
 import requests
+from genesis import genesis
 
 users = []
 import time
 
 def password():
     password = st.text_input("Type in your password", type='password')
+    if not password:
+        st.warning("A detective MUST be secure")
     return password
 
 def passkey(password):
@@ -16,8 +19,11 @@ def passkey(password):
     return hash_key
 
 def name():
-    name = st.text_input("Put in your fucking name you idiot")
-    if name:
+    name = st.text_input("Type in your name please:")
+    if not name:
+        st.warning("A good data detective needs a name!")
+        return
+    else:
         st.caption(f"Nice to meet you {name.capitalize()}, I, am The Mastermind :sunglasses:")
     return name
 
@@ -29,27 +35,28 @@ def save_user(name, passkey, userDB):
 def start_engine():
     st.title("Booting Up The DS Engine")
     st.caption("Running on ALIEN DNA")
+
+#name = name()   
+#password = password()
+#passkey = passkey(password)
+
+#save_user(name, passkey, users)
+
+#txt = "Loading State"
+
+#if st.button("Let me in!"):
+    #bar = st.progress(0, txt)
     
-password = password()
-passkey = passkey(password)
-name = name()
-save_user(name, passkey, users)
+    #for i in range(100):
+        #bar.progress(i, f":blue[{txt}]" )
+        #time.sleep(.0318)
+    #start_engine()  
 
-txt = "Loading State"
-
-if st.button("Let me in!"):
-    bar = st.progress(0, txt)
-    
-    for i in range(100):
-        bar.progress(i, f":blue[{txt}]" )
-        time.sleep(.0318)
-    start_engine()  
-
-
-col1, col2 = st.columns(2)
-
+exp = 10
+col1, col2 = st.columns([3, 1])
+#name = st.text_input("What is your name, detective?")
 with col1:
-    genesis(name)
+    genesis()
 with col2:
-    st.info("col2")
+    st.success(f"Experience Points: {exp}pts.")
 
