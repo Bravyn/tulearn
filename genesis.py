@@ -1,4 +1,5 @@
 import streamlit as st
+from chapter_one import chapter_one
 
 def genesis(experience, name= "zainab"):
     if not name:
@@ -17,10 +18,17 @@ def genesis(experience, name= "zainab"):
         """)
     st.divider()
     st.write(f":blue[What shall we do {name}] ? ")
-    
-    if st.button("Proceed with our analysis"):
-        experience += 1
-        "Proceeding"
-    if st.button("I wanna quit, Mastermind"):
-        experience -= 1
-    return experience
+    options = ["""Indeed Mr. Mastermind, let's proceed with analysis .
+            The darkness that shrouds these crimes has
+            gripped the city with fear.""", "No, The City Can Sort Itself"]
+    with st.expander("View Options"):
+        choice = st.radio("Proceed With Analysis", [options[0],options[1]])
+
+        if choice == 'Yes, let us proceed':
+            experience += 1
+            chapter_one()
+            
+        elif choice == "I wanna quit, Mastermind":
+            experience -= 1
+            
+        return experience
