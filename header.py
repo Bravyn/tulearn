@@ -38,4 +38,5 @@ def header():
         </div> 
            
     """, unsafe_allow_html=True)
+    st.divider()
     st.caption(":blue[**Created by Ian Bravyn.**]")

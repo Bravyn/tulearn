@@ -1,13 +1,13 @@
 import hashlib
 import streamlit as st
 
-def password():
+def user_password():
     password = st.text_input("Type in your password", type='password')
     if not password:
         st.warning("A detective MUST be secure")
     return password
 
-def passkey(password):
+def user_passkey(password):
     sha256hash = hashlib.sha256()
     sha256hash.update(password.encode('utf-8'))
     hash_key = sha256hash.hexdigest()

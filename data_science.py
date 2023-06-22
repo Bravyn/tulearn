@@ -1,22 +1,22 @@
 import streamlit as st
 import requests
 from genesis import genesis
-from user_data import save_user, user_name, passkey, password
+from user_data import save_user, user_name, user_passkey, user_password
 global exp
 
 users = []
 import time
 
-st.header("THE MASTERMIND")
-st.caption("Created by Ian Bravyn (ianbravynsa@gmail.com)")
+#st.header("THE MASTERMIND")
+#st.caption("Created by Ian Bravyn (ianbravynsa@gmail.com)")
   
 
 def start_engine():
     st.title("Data Science Detective Engine Running")
     st.caption("Running on ALIEN DNA")
     name = user_name()  
-    password = password()
-    passkey = passkey(password)
+    password = user_password()
+    passkey = user_passkey(password)
 
     save_user(name, passkey, users)
 
