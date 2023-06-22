@@ -1,6 +1,7 @@
 import streamlit as st
 import time
-
+from header import header
+from data_science import start
 def cards(content):
     st.markdown(f"""
     <style>
@@ -24,8 +25,13 @@ def cards(content):
 with open("mastermind.txt", 'r') as f:
     data = f.read()
     data = data.split(".")
-
+    
+    header()
     cards(data)
+    st.divider()
+    if st.button("Get Started"):
+        start()
+
         
 
        
