@@ -6,6 +6,8 @@ from genesis import genesis
 users = []
 import time
 
+st.header("THE MASTERMIND")
+st.caption("Created by Ian Bravyn (ianbravynsa@gmail.com)")
 def password():
     password = st.text_input("Type in your password", type='password')
     if not password:
@@ -33,34 +35,36 @@ def save_user(name, passkey, userDB):
         userDB.append(user)  
 
 def start_engine():
-    st.title("Booting Up The DS Engine")
+    st.title("Data Science Detective Engine Running")
     st.caption("Running on ALIEN DNA")
 
-#name = name()   
-#password = password()
-#passkey = passkey(password)
+name = name()   
+password = password()
+passkey = passkey(password)
 
-#save_user(name, passkey, users)
+save_user(name, passkey, users)
 
-#txt = "Loading State"
+txt = "Loading State"
 
-#if st.button("Let me in!"):
-    #bar = st.progress(0, txt)
+if st.button("Let me in!"):
+    bar = st.progress(0, txt)
     
-    #for i in range(100):
-        #bar.progress(i, f":blue[{txt}]" )
-        #time.sleep(.0318)
-    #start_engine()  
+    for i in range(100):
+        bar.progress(i, f":blue[{txt}]" )
+        time.sleep(.0318)
+    start_engine()  
 
 global exp
 exp = 10
 col1, col2 = st.columns([3, 1])
 #name = st.text_input("What is your name, detective?")
-with col1:
-    exp = genesis(exp)
-    
-with col2:
-    bar = st.progress(0, "Detective Zainab's Experience")
-    bar.progress(exp,"Detective Zainab's Experience" )
-    #st.success(f"Experience Points: {exp}pts.")
-
+if name:
+    with col1:
+        exp = genesis(exp, name)
+        
+    with col2:
+        bar = st.progress(0, f"Detective {name}'s Experience")
+        bar.progress(exp,f"Detective {name}'s Experience" )
+        #st.success(f"Experience Points: {exp}pts.")
+else:
+    st.warning("PLease enter name")
