@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 from header import header
 from data_science import start
 from intro_card import cards
@@ -12,7 +11,8 @@ with open("mastermind.txt", 'r') as f:
     st.divider()
     with st.expander("Get Started"):
         start()
-    load_gen()
+
+load_gen()
         
 
        

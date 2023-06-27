@@ -1,6 +1,5 @@
 import streamlit as st
-from chapter_one import chapter_one
-import time
+from chapter_one import chapter_one    
 
 def genesis(experience, name= "zainab"):
     if not name:
@@ -25,7 +24,6 @@ def genesis(experience, name= "zainab"):
         proceed = st.radio(":blue[Proceed With Analysis?]", [options[0],options[1]])
 
         if proceed == options[0]:
-            time.sleep(.7)
             chapter_one()        
             experience += 20
             
