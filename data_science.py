@@ -26,13 +26,15 @@ txt = "Loading State"
 
 def start(): 
     bar = st.progress(0, txt)
-    
+  
     for i in range(100):
         bar.progress(i, f":blue[{txt}]" )
         time.sleep(.07)
 
     start_engine()
-    st.write(users)
-    load(users[0].name) 
+
+def load_gen(users = users):
+    load(users[0]['name'])
+
      
 

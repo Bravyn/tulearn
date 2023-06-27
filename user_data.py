@@ -23,6 +23,6 @@ def user_name():
     return name
 
 def save_user(name, passkey, userDB):
-    user = dict({name, passkey})
+    user = {"name": name, "passkey": passkey}
     if user not in userDB:
         userDB.append(user)
