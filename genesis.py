@@ -8,8 +8,7 @@ def genesis(experience, name= "zainab"):
     else:
         st.caption("The Mastermind:")
         st.write(f"""Ah {name}, the weight of our investigation
-        rests heavily upon us. The local police depart
-        ment has sought our aid in unraveling a series
+        rests heavily upon us. The local police department has sought our aid in unraveling a series
         of unsolved crimes that have :red[struck fear] into
         the heart of our city. The secrets lie hidden 
         within a mysterious dataset they have provided-
