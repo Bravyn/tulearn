@@ -15,7 +15,8 @@ def header():
            text-align: center;
            background-color: #800000;
            color: #fff;
-           transform: rotate(1.618deg);      
+           transform: rotate(1.618deg);   
+          border-radius: .3rem;   
 
            }}
         .glitch{{

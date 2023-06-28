@@ -15,7 +15,7 @@ def cards(content):
               font-size: 1rem;
               border: 4px solid rgba(255, 255, 255, .9);
               padding: .9rem;
-              border-radius: 1rem; 
+              border-radius: .618rem;
               margin: 0 auto;
           }}
         .card:hover{{
@@ -25,7 +25,7 @@ def cards(content):
        
     </style>
     
-    """, unsafe_allow_html=True)
+    """,  unsafe_allow_html=True)
     for card in content:
         if card != content[-1]:
             st.markdown(f'<div class = "card"> { card  + "." }</div>', unsafe_allow_html=True)

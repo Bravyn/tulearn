@@ -11,7 +11,7 @@ with open("mastermind.txt", 'r') as f:
     header()
     cards(data)
     st.divider()
-    with st.expander("Get Started"):
+    with st.expander("**Get Started :smiley:**"):
         start()
 from data_science import users
 users.clear()
