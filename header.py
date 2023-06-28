@@ -23,8 +23,8 @@ def header():
             position: relative;
             font-family: 'Kanit', sans-serif;
             font-size: 2rem;
-            font-weight: 700;
-            line-height: 1.2;
+            font-weight: 100;
+            line-height: 1;
             letter-spacing: .618rem;
             z-index: 1;
             }}
