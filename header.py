@@ -40,16 +40,18 @@ def header():
     <style>
     
     """, unsafe_allow_html=True)
-
-    st.markdown(f"""
-        <div class = "glitch-wrapper">
-                
-           <div class = "glitch">
-                THE MASTERMIND
-            </div>
-           
-        </div> 
-           
-    """, unsafe_allow_html=True)
-    st.divider()
-    st.caption(":blue[Created by Ian Bravyn.]")
+    col1, col2 = st.columns([4,1])
+    with col1:
+        st.markdown(f"""
+            <div class = "glitch-wrapper">
+                    
+            <div class = "glitch">
+                    THE MASTERMIND
+                </div>
+            
+            </div> 
+            
+        """, unsafe_allow_html=True)
+    #st.divider()
+    with col2:
+        st.caption(":red[Created by :blue[Ian Bravyn].:sunglasses:]")
