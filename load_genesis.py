@@ -14,7 +14,7 @@ def load(name):
             bar.progress(exp,f"Detective {name}'s Experience" )
             #st.success(f"Experience Points: {exp}pts.")
     else:
-        st.warning("PLease enter name")
+        st.warning("Please enter name")
 
 def unload(users):
     users.clear()

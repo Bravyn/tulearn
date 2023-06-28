@@ -1,10 +1,11 @@
 import streamlit as st
 from chapter_one import chapter_one    
 
-def genesis(experience, name= "zainab"):
+def genesis(experience, name):
     if not name:
         st.write("Can't Start the Detective Data Engine without a name")
     else:
+        name = name.capitalize()
         st.caption("The Mastermind:")
         st.write(f"""Ah {name}, the weight of our investigation
         rests heavily upon us. The local police department has sought our aid in unraveling a series
@@ -24,7 +25,7 @@ def genesis(experience, name= "zainab"):
         proceed = st.radio(":blue[Proceed With Analysis?]", [options[0],options[1]])
 
         if proceed == options[0]:
-            chapter_one()        
+            chapter_one(name)        
             experience += 20
             
         elif proceed == options[1]:

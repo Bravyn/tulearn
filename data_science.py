@@ -21,9 +21,7 @@ def start_engine():
     save_user(name, passkey, users)
 
     
-txt = "Loading State"
-
-
+#txt = "Loading State"
 def start(): 
     #bar = st.progress(0, txt)
   
@@ -34,8 +32,9 @@ def start():
     start_engine()
 
 def load_gen(users = users):
-    load(users[0]['name'])
+    load(users[-1]['name'])
 
 def unload_gen(users = users ):
     unload(users)
+    #pass
 

@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 
-def chapter_one(name = "Zainab"):
+def chapter_one(name):
     
     st.caption("**:red[The Mastermind]:**")
     st.info("We shall unravel everything. Let\
