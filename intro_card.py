@@ -7,19 +7,19 @@ def cards(content):
     st.markdown(f"""
     <style>
         .card{{
-              background: rgba(0, 0, 0, .618);
+              background: #333333;
               color: #fff; 
               font-family: 'Kanit', sans-serif;
               -webkit-backdrop-filter:blur(.3rem);
               backdrop-filter: blur(.3rem);
               font-size: 1rem;
               border: 4px solid rgba(255, 255, 255, .9);
-              padding: .7rem;
+              padding: .9rem;
               border-radius: 1rem; 
               margin: 0 auto;
           }}
         .card:hover{{
-                transform: translate(.30rem, .20rem)
+                transform: translate(.5rem, .5rem)
         }}
        
     </style>

@@ -13,9 +13,10 @@ def header():
            align-items: center;
            justify-content: center;
            text-align: center;
-           background-color: #222;
+           background-color: #800000;
            color: #fff;
-           
+           transform: rotate(1.618deg);      
+
            }}
         .glitch{{
             padding: .618rem;
@@ -29,8 +30,8 @@ def header():
             }}
                 
         .glitch:hover{{
-            
             transform: rotate(2.618deg);      
+
         }}
        
         
