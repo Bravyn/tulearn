@@ -14,8 +14,9 @@ with open("mastermind.txt", 'r') as f:
     with st.expander("**Get Started :smiley:**"):
         start()
 from data_science import users
-users.clear()
+
 load_gen()
+users.clear()
 
        
         
