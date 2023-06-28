@@ -12,8 +12,8 @@ import time
   
 
 def start_engine():
-    st.title("Data Science Detective Engine Running")
-    st.caption("Running on ALIEN DNA")
+    st.title(":red[Data Science Detective Engine Running:sunglasses:]")
+    st.caption("Running on ALIEN DNA:alien:")
     name = user_name()  
     password = user_password()
     passkey = user_passkey(password)
