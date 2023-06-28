@@ -2,7 +2,7 @@ from genesis import genesis
 import streamlit as st
 
 def load(name):
-    exp = 10
+    exp = 1
     col1, col2 = st.columns([3, 1])
     #name = st.text_input("What is your name, detective?")
     if name:

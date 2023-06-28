@@ -32,7 +32,8 @@ def start():
     start_engine()
 
 def load_gen(users = users):
-    load(users[-1]['name'])
+    if len(users) > 0:
+        load(users[-1]['name'])
 
 def unload_gen(users = users ):
     unload(users)
