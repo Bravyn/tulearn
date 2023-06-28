@@ -18,6 +18,7 @@ def header():
            
            }}
         .glitch{{
+            padding: .618rem;
             position: relative;
             font-family: 'Kanit', sans-serif;
             font-size: 2rem;
@@ -25,9 +26,15 @@ def header():
             line-height: 1.2;
             letter-spacing: .618rem;
             z-index: 1;
-
             }}
+                
+        .glitch:hover{{
+            
+            transform: rotate(2.618deg);      
+        }}
        
+        
+        
     <style>
     
     """, unsafe_allow_html=True)

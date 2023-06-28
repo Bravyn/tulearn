@@ -15,9 +15,12 @@ def cards(content):
               font-size: 1rem;
               border: 4px solid rgba(255, 255, 255, .9);
               padding: .7rem;
-              border-radius: 1rem;
+              border-radius: 1rem; 
               margin: 0 auto;
           }}
+        .card:hover{{
+                transform: translate(.30rem, .20rem)
+        }}
        
     </style>
     
