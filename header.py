@@ -30,7 +30,7 @@ def header():
             }}
                 
         .glitch:hover{{
-            transform: rotate(2.618deg);      
+            transform: rotate(-3.141deg);      
 
         }}
        
