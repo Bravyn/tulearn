@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from user_data import save_user, user_name, user_passkey, user_password
 global exp
-from load_genesis import load
+from load_genesis import load, unload
 
 users = []
 import time
@@ -25,16 +25,17 @@ txt = "Loading State"
 
 
 def start(): 
-    bar = st.progress(0, txt)
+    #bar = st.progress(0, txt)
   
-    for i in range(100):
-        bar.progress(i, f":blue[{txt}]" )
-        time.sleep(.07)
+    #for i in range(100):
+        #bar.progress(i, f":blue[{txt}]" )
+        #time.sleep(.07)
 
     start_engine()
 
 def load_gen(users = users):
     load(users[0]['name'])
 
-     
+def unload_gen(users = users ):
+    unload(users)
 

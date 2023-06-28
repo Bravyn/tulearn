@@ -16,3 +16,5 @@ def load(name):
     else:
         st.warning("PLease enter name")
 
+def unload(users):
+    users.clear()
