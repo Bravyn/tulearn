@@ -2,6 +2,7 @@ import hashlib
 import streamlit as st
 
 def user_password():
+    st.caption("A name is enough to proceed")
     password = st.text_input("Type in your password", type='password')
     if not password:
         st.warning("A detective MUST be secure")
