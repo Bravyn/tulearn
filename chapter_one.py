@@ -51,5 +51,8 @@ def chapter_one(name):
 
             """
             st.code(code2)
+            st.caption(":blue[**The Mastermind**]")
+            st.caption("Do you wish to Continue playing?")
+            st.caption("Email me at ianbravyns@gmail.com your answer")
             points_attained = 2
             return points_attained
