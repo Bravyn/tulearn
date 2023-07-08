@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+from multiverse.verse_one.verse_one import verse_one_alternatives
 
 def chapter_one(name):
     
@@ -51,8 +52,72 @@ def chapter_one(name):
 
             """
             st.code(code2)
-            st.caption(":blue[**The Mastermind**]")
+
+            st.caption(":red[**The Mastermind**]")
+            st.info(f"Fascinating, {name}! Each row is a glimpse into the darkness that engulfs our city. \
+                    Dates, locations, crime types—they all hold the key to our investigation.")
+            st.caption(f":blue[**{name}**]")
+            verse_one_alternatives(name)
+            st.caption(f":blue[**{name}**]")
+            st.info("The secrets, Mastermind—they begin to reveal themselves.")
+            st.code(
+                """
+                    |         | Suspects  | Witnesses
+                        count  100.00000    100.00000
+                        mean     2.17000    2.29000
+                        std      0.92707    1.15675
+                        min      1.00000    1.00000
+                        25%      1.00000    1.00000
+                        50%      2.00000    2.00000
+                        75%      3.00000    3.00000
+                        max      4.00000    5.00000
+
+
+                """, line_numbers=True
+            )
+            st.caption(":red[**The Mastermind**]")
+            st.info(f"""
+               The secrets have begun to whisper, {name}. 
+               On average, each crime hides approximately two suspects and two witnesses within its murky depths.
+               But remember, Watson, the range of suspects and witnesses may hold the key to unraveling these mysteries.
+            """)
+            st.caption(f":blue[**{name}**]")
+            st.info("The secrets unfold before us, Mastermind. How shall we proceed further on this treacherous path?")
+            st.caption(":red[**The Mastermind**]")
+            st.info("""
+               We shall illuminate the shadows, Watson. 
+               Visualization shall be our torch, 
+               revealing patterns hidden from mortal eyes.
+               Arm yourself with the tools of Matplotlib.
+
+            """)
+            st.code("""
+                import matplotlib.pyplot as plt
+
+                # Unveil the patterns with a plot of crime type distribution
+                crime_data['Crime_Type'].value_counts().plot(kind='bar')
+                plt.xlabel('Crime Type')
+                plt.ylabel('Frequency')
+                plt.title('Distribution of Crime Types')
+                plt.show()
+
+
+            """)
+
+
+
+
+            
+                      
+                
+
+
+
+
+            st.caption(":red[**The Mastermind**]")
             st.caption("Do you wish to Continue playing?")
             st.caption("Email me at ianbravyns@gmail.com your answer")
+            
+            
             points_attained = 2
             return points_attained
