@@ -1,6 +1,8 @@
 import streamlit as st
 import time
 from multiverse.verse_one.verse_one import verse_one_alternatives
+from multiverse.verse_one.verse_one_data import dataset_frame
+
 
 def chapter_one(name):
     
@@ -43,12 +45,12 @@ def chapter_one(name):
             st.info("Behold Mastermind! The shadows begin to take shape.")
             
             code2 = """
-                          Date      Location    Crime_Type      Suspects  Witnesses
-                       2023-01-15   Baker St.   Robbery            1         3
-                       2023-01-18   Park Rd.    Assault            2         1
-                       2023-01-21   Elm St.     Burglary           3         2
-                       2023-01-24   Maple Ave.  Robbery            2         4
-                       2023-01-25   Baker St.   Assault            1         2
+                       date    location crime_type  suspects  witnesses
+                   2022-10-19     Home    Robbery         4          0
+                   2022-10-19     Work    Assault         0          1
+                   2022-10-19   Street     Murder         2          3
+                   2022-10-19    Store      Fraud         4          3
+                   2022-10-19    Store    Assault         4          0
 
             """
             st.code(code2)
@@ -61,19 +63,18 @@ def chapter_one(name):
             st.caption(f":blue[**{name}**]")
             st.info("The secrets, Mastermind—they begin to reveal themselves.")
             st.code(
-                """
-                    |         | Suspects  | Witnesses
-                        count  100.00000    100.00000
-                        mean     2.17000    2.29000
-                        std      0.92707    1.15675
-                        min      1.00000    1.00000
-                        25%      1.00000    1.00000
-                        50%      2.00000    2.00000
-                        75%      3.00000    3.00000
-                        max      4.00000    5.00000
-
-
-                """, line_numbers=True
+               """
+              |        |  suspects   |  witnesses
+                count    200.000000    200.000000
+                mean     2.470000      2.370000
+                std      1.680243      1.632921
+                min      0.000000      0.000000
+                25%      1.000000      1.000000
+                50%      3.000000      2.000000
+                75%      4.000000      4.000000
+                max      5.000000      5.000000
+                """, 
+line_numbers=True
             )
             st.caption(":red[**The Mastermind**]")
             st.info(f"""
@@ -102,14 +103,7 @@ def chapter_one(name):
                 plt.show()
 
 
-            """)
-
-
-
-
-            
-                      
-                
+            """)  
 
 
 
@@ -119,5 +113,5 @@ def chapter_one(name):
             st.caption("Email me at ianbravyns@gmail.com your answer")
             
             
-            points_attained = 2
+            points_attained = 4
             return points_attained

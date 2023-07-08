@@ -1,5 +1,7 @@
 
 from multiverse.verse_one.verse_one_data import describe_data
+from multiverse.verse_one.verse_one_data import dataset_frame
+
 
 import streamlit as st
 
@@ -11,9 +13,9 @@ def verse_one_alternatives(name , alternatives = describe_data):
         st.info(f"""
                 By all means, {name}. Unleash the power of statistics, and let us grasp the magnitude of our investigation.
             """)
-        st.code("""
+        st.code(f"""
         # Unveil the secrets with summary statistics
-        crime_data.describe()
+        {dataset_frame.describe()}
         """, line_numbers=True)
     elif choice == describe_data[1]:
         st.caption(":red[**The Mastermind**]")
@@ -26,9 +28,9 @@ def verse_one_alternatives(name , alternatives = describe_data):
             we inch closer to shedding light on the darkness that plagues our beloved city.                
             Together, we shall unlock the truth.
         """)
-        st.code("""
+        st.code(f"""
         # Unveil the secrets with summary statistics
-        crime_data.describe()
+        { dataset_frame.describe() }
         """, line_numbers=True)
 
 
