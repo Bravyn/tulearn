@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config("The Mastermind", ':biohazard_sign:')
 from header import header
 from data_science import start
 from intro_card import cards
