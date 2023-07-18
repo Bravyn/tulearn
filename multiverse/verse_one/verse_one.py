@@ -2,7 +2,6 @@
 from multiverse.verse_one.verse_one_data import describe_data
 from multiverse.verse_one.verse_one_data import dataset_frame
 
-
 import streamlit as st
 
 def verse_one_alternatives(name , alternatives = describe_data):
