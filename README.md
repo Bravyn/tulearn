@@ -5,8 +5,9 @@ Teaching kids how to code
 This project is a Flask-based web application that leverages OpenAI's GPT model to enable users learn in a fun and interactive way.
 Here is a detailed `README.md` for your project:
 
-```markdown
-# Fine-Tuned GPT-3.5 Turbo Chatbot
+## Introduction
+
+### Fine-Tuned GPT-3.5 Turbo Chatbot
 
 This project demonstrates how to fine-tune OpenAI's GPT-3.5 Turbo model on a custom dataset and deploy a Flask endpoint to serve the inference. The example provided is for a chatbot named "Marv," which is factual and sarcastic.
 
