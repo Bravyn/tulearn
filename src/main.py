@@ -1,7 +1,7 @@
 # Load your API key from an environment variable or secret management service
 from flask import Flask, request, jsonify
 import openai
-from src.config import OPENAI_API_KEY
+from config import OPENAI_API_KEY
 from app.ds_data import ds_data
 
 
@@ -10,10 +10,14 @@ openai_api_key = OPENAI_API_KEY
 if not openai_api_key:
     raise ValueError("OpenAI API key not found in environment variables.")
 
-# Function to get completion from OpenAI's GPT model based on the query and faq_data
-def get_completion(query, faq_data):
+# Function to get completion from OpenAI's GPT model based on the query and ds_data
+def get_completion(query, ds_data):
     try:
-        context = "\n".join([f"Q: {item['question']}\nA: {item['answer']}\nNavigation: {item['navigation']['description']} (Path: {item['navigation']['path']})" for item in faq_data])
+        context = "\n".join([f"Q: {item['question']}\n
+                                A: {item['answer']}\n
+                                Navigation: {item['navigation']['description']} 
+                                (Path: {item['navigation']['path']})" for item in ds_data
+                            ])
         messages = f"{context}\nQ: {query}\nA:"
         
         response = openai.ChatCompletion.create(
@@ -31,10 +35,10 @@ def get_completion(query, faq_data):
         print(f"Error in get_completion: {e}")
         return None
 
-# Function to get navigation details from faq_data based on the query
-def get_navigation(query, faq_data):
+# Function to get navigation details from ds_data based on the query
+def get_navigation(query, ds_data):
     try:
-        for item in faq_data:
+        for item in ds_data:
             if item['question'].lower() in query.lower():
                 return item['navigation']
         return None
@@ -56,11 +60,11 @@ def chatbot():
         if not query:
             return jsonify({'error': 'No query provided'}), 400
         
-        response_text = get_completion(query, faq_data)  # Get the completion from OpenAI's GPT model
+        response_text = get_completion(query, ds_data)  # Get the completion from OpenAI's GPT model
         if response_text is None:
             return jsonify({'error': 'Failed to generate response'}), 500
         
-        navigation = get_navigation(query, faq_data)  # Get the navigation details
+        navigation = get_navigation(query, ds_data)  # Get the navigation details
         if navigation:
             response = {
                 'navigation': navigation,
