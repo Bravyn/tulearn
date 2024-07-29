@@ -1,7 +1,6 @@
 # Tulearn
 Teaching kids how to code
 
-
 This project is a Flask-based web application that leverages OpenAI's GPT model to enable users learn in a fun and interactive way.
 Here is a detailed `README.md` for your project:
 
