@@ -49,6 +49,17 @@ This project demonstrates how to fine-tune OpenAI's GPT-3.5 Turbo model on a cus
 
 ## Usage
 
+### `requirements.txt`
+Make sure you have a `requirements.txt` file that includes the necessary dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+```plaintext
+openai
+flask
+```
+
 ### Training the Model
 
 1. Prepare your dataset in JSONL format. Ensure it is located at `B:/ai/tulearn/src/app/data/data_science_faq.jsonl`.
@@ -112,15 +123,5 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-
-### `requirements.txt`
-Make sure you have a `requirements.txt` file that includes the necessary dependencies:
-
-```plaintext
-openai
-flask
-```
 
 This `README.md` provides a comprehensive guide to installing, configuring, and using your project, as well as instructions for contributing and information about the license.
