@@ -112,3 +112,6 @@ ds_data = [
     },
     # Add more data as needed
 ]
+
+## License
+MIT License
