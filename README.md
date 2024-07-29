@@ -25,6 +25,15 @@ These instructions will help you set up and run the project on your local machin
 - An OpenAI API key
 - Flask
 
+### Project Directory Structure
+
+Here's the markdown format of the project directory structure:
+
+```markdown
+# Project Directory Structure
+
+![directory structure](data/directory-structure.png)
+
 ### Installation
 
 1. Clone the repository:
@@ -46,7 +55,7 @@ These instructions will help you set up and run the project on your local machin
 
 ### Configuration
 
-1. Add your OpenAI API key in a `config.py` file:
+1. Add your OpenAI API key in a `.env` file:
     ```python
     OPENAI_API_KEY = 'your-openai-api-key'
     ```
