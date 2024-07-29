@@ -27,12 +27,7 @@ These instructions will help you set up and run the project on your local machin
 
 ### Project Directory Structure
 
-Here's the markdown format of the project directory structure:
-
-```markdown
-# Project Directory Structure
-
-![directory structure](data/directory-structure.png)
+---
 
 ### Installation
 
