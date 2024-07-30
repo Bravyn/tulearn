@@ -8,7 +8,7 @@ openai.api_key = OPENAI_API_KEY
 def fine_tune_model():
     # Upload the file
     json_response = openai.File.create(
-        file=open("B:/ai/tulearn/src/app/data/data_science_faq.jsonl", "rb"),
+        file=open("D:/tulearn/tulearn/src/app/data/data_science_faq.jsonl", "rb"),
         purpose='fine-tune'
     )
 

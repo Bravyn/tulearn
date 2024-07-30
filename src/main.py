@@ -1,5 +1,5 @@
 import openai
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from config import OPENAI_API_KEY
 
 # Load your API key from an environment variable or secret management service
@@ -11,22 +11,27 @@ app = Flask(__name__)
 def get_fine_tune_job_details(fine_tune_id):
     return openai.FineTuningJob.retrieve(fine_tune_id)
 
+@app.route('/')
+def home():
+    return "<h1> Hello there! Try 127.0.0.1:5000/chat </h1>"
 # Endpoint for inference
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['GET','POST'])
 def chat():
-    data = request.json
-    user_message = data.get('message', '')
-
+    message = ""
+    if request.method == 'POST':
+        message = request.form['message']
+    
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."},
-            {"role": "user", "content": user_message}
+            {"role": "user", "content": message}
         ]
     )
 
     response_message = completion.choices[0].message['content']
-    return jsonify({"response": response_message})
+    #return jsonify({"response": response_message})
+    return render_template('index.html', message = response_message)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
