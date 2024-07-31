@@ -23,16 +23,19 @@ def chat():
     message = ""
     if request.method == 'POST':
         message = request.form['message']
-    
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."},
-            {"role": "user", "content": message}
-        ]
-    )
+    try:
+        completion = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "Marv is a factual chatbot that is also sarcastic."},
+                {"role": "user", "content": message}
+            ]
+        )
 
-    response_message = completion.choices[0].message['content']
+        response_message = completion.choices[0].message['content']
+    except Exception as e:
+            response_message = f"Error: {e}"
+            
     #return jsonify({"response": response_message})
     return render_template('index.html', message = response_message)
 
