@@ -4,3 +4,4 @@ import os
 load_dotenv()  # Load environment variables from .env file
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+WANDB_API_KEY = os.getenv('WANDB_API_KEY')

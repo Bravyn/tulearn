@@ -1,0 +1,53 @@
+{
+    "os": "Windows-11-10.0.22621-SP0",
+    "python": "3.12.3",
+    "heartbeatAt": "2024-07-31T07:55:05.528679",
+    "startedAt": "2024-07-31T07:55:02.799195",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "B:\\ai\\tulearn\\src\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "src\\train.py",
+    "git": {
+        "remote": "https://github.com/Bravyn/tulearn.git",
+        "commit": "2b3421379e2662dec5cd3e4c3e49ef554281d64e"
+    },
+    "email": "paulmwaura254@gmail.com",
+    "root": "B:/ai/tulearn",
+    "host": "mindscope",
+    "username": "User",
+    "executable": "B:\\ai\\tulearn\\venv\\Scripts\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3401.0,
+        "min": 0.0,
+        "max": 3401.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3401.0,
+            "min": 0.0,
+            "max": 3401.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 101.03222274780273,
+            "used": 15.252822875976562
+        }
+    },
+    "gpu": "Quadro P620",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Quadro P620",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 7.921367645263672
+    }
+}

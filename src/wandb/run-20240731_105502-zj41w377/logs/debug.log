@@ -1,0 +1,29 @@
+2024-07-31 10:55:02,801 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Configure stats pid to 15636
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Loading settings from C:\Users\User\.config\wandb\settings
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Loading settings from B:\ai\tulearn\src\wandb\settings
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src\\train.py', 'program_abspath': 'B:\\ai\\tulearn\\src\\train.py', 'program': 'B:\\ai\\tulearn\\src\\train.py'}
+2024-07-31 10:55:02,802 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:_log_setup():529] Logging user logs to B:\ai\tulearn\src\wandb\run-20240731_105502-zj41w377\logs\debug.log
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:_log_setup():530] Logging internal logs to B:\ai\tulearn\src\wandb\run-20240731_105502-zj41w377\logs\debug-internal.log
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:init():569] calling init triggers
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:init():619] starting backend
+2024-07-31 10:55:02,803 INFO    MainThread:15636 [wandb_init.py:init():623] setting up manager
+2024-07-31 10:55:02,805 INFO    MainThread:15636 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-07-31 10:55:02,808 INFO    MainThread:15636 [wandb_init.py:init():631] backend started and connected
+2024-07-31 10:55:02,812 INFO    MainThread:15636 [wandb_init.py:init():720] updated telemetry
+2024-07-31 10:55:02,856 INFO    MainThread:15636 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-07-31 10:55:04,735 INFO    MainThread:15636 [wandb_run.py:_on_init():2435] communicating current version
+2024-07-31 10:55:05,443 INFO    MainThread:15636 [wandb_run.py:_on_init():2444] got version response 
+2024-07-31 10:55:05,443 INFO    MainThread:15636 [wandb_init.py:init():804] starting run threads in backend
+2024-07-31 10:55:05,730 INFO    MainThread:15636 [wandb_run.py:_console_start():2413] atexit reg
+2024-07-31 10:55:05,730 INFO    MainThread:15636 [wandb_run.py:_redirect():2255] redirect: wrap_raw
+2024-07-31 10:55:05,731 INFO    MainThread:15636 [wandb_run.py:_redirect():2320] Wrapping output streams.
+2024-07-31 10:55:05,731 INFO    MainThread:15636 [wandb_run.py:_redirect():2345] Redirects installed.
+2024-07-31 10:55:05,755 INFO    MainThread:15636 [wandb_init.py:init():847] run started, returning control to user process
+2024-07-31 10:55:30,573 WARNING MsgRouterThr:15636 [router.py:message_loop():77] message_loop has been closed
