@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+</head>
+<body>
+    <h1>Type your message</h1>
+    <form method="post">
+        <textarea name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if message %}
+        <h2>Your Message:</h2>
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
