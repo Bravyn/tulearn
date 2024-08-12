@@ -15,7 +15,7 @@ def get_fine_tune_job_details(fine_tune_id):
 
 @app.route('/')
 def home():
-    return "<h1> Hello there! Try 127.0.0.1:5000/chat </h1>"
+    return render_template("landing_page.html")
 
 # Endpoint for inference
 @app.route('/chat', methods=['GET','POST'])
