@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Type your message</h1>
-    <form method="post">
-        <textarea name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
-    {% if message %}
-        <h2>Your Message:</h2>
-        <p>{{ message }}</p>
-    {% endif %}
+    <div class="container">
+        <h1>Unlock the Secrets of Data Science!</h1>
+        <form method="post">
+            <textarea name="message" rows="4" cols="50" placeholder="Share your data science journey or ask a question!"></textarea><br>
+        
+            <label for="goals">What are your learning goals?</label>
+            <input type="text" id="goals" name="goals" placeholder="e.g., Become a data analyst, learn Python, etc."><br>
+        
+            <label for="experience">What is your current experience level?</label>
+            <select id="experience" name="experience">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select><br>
+        
+            <label for="topics">What specific topics are you interested in? (e.g., machine learning, data visualization)</label>
+            <input type="text" id="topics" name="topics" placeholder="e.g., machine learning, data visualization"><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    
+        {% if message %}
+            <h2>Your Message:</h2>
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
 </body>
 </html>
+
+
