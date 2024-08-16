@@ -15,7 +15,7 @@ def get_fine_tune_job_details(fine_tune_id):
 
 @app.route('/')
 def home():
-    return render_template("landing_page.html")
+    return render_template("landing.html")
 
 # Endpoint for inference
 @app.route('/chat', methods=['GET','POST'])
